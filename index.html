@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0073)file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pablo Beytía - Computational Social Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="./Pablo Beytía - Computational Social Science_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Pablo Beytía - Computational Social Science_files/all.min.css">
+    <link rel="stylesheet" href="./Pablo Beytía - Computational Social Science_files/all(1).min.css">
 
     <style>
         :root {
@@ -451,6 +451,21 @@
             }
         }
 
+        .palabra-container {
+            display: inline-block;
+            height: 1.85em; /* Ajusta este valor según necesites */
+            min-width: 200px; /* Ajusta este valor según el ancho mínimo que necesites */
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        #palabra {
+            display: inline-block;
+            text-align: left;
+            min-height: 1em; /* Altura mínima de una línea */
+            max-height: 3em; /* Máximo de tres líneas, ajusta según necesites */
+            overflow: hidden;
+        }
 
         .publication-section {
             margin-bottom: 10px;
@@ -460,7 +475,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            gap: 0.7rem;
+            gap: 1.2rem;
             line-height: 1.5;
             margin-bottom: 0rem;
         }
@@ -476,7 +491,7 @@
         }
 
         .publication-item.book-item {
-            display: block;
+            display: flex;
             width: 100%;
             margin-bottom: 1rem;
             border: 1px solid #e0e0e0;
@@ -493,12 +508,12 @@
 
         .pdf-link {
             display: inline-block;
-            padding: 2px 0px;
+            padding: 1px 0px;
             background-color: none;
             color:   #b10000;
             text-decoration: none;
             border-radius: 2px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             transition: background-color 0.3s;
         }
 
@@ -517,7 +532,7 @@
             }
 
             .publication-item p {
-                margin-bottom: 0px;
+                margin-bottom: 10px;
                 padding-right: 0;
             }
 
@@ -525,7 +540,6 @@
                 align-self: flex-start;
             }
         }
-
 
         .book-item {
             display: flex;
@@ -536,6 +550,7 @@
         }
 
         .book-image {
+            flex: 0 0 200px;
             float: left;
             width: 200px;
             height: 300px;
@@ -543,12 +558,14 @@
         }
 
         .book-image img {
+            max-width: 100%;
             width: 100%;
             height: auto;
             object-fit: cover;
         }
 
         .book-info {
+            flex: 1;
             overflow: hidden;
             padding: 1rem;
         }
@@ -582,11 +599,51 @@
         }
 
 
+        @media screen and (max-width: 768px) { 
+            .publication-item.book-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book-image {
+                flex: none;
+                margin-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+                padding-top: 1rem;
+            }
+
+            .book-image img {
+                max-width: 200px; /* Ajusta este valor según el tamaño deseado en móviles */
+            }
+
+            .book-info {
+                flex: none;
+            }
+        }
+
+
         .inicio-content {
             position: relative;
             z-index: 2;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
         }
+
+        .inicio-content h1 {
+            line-height: 1.2; /* Reduce el espacio entre líneas del h1 */
+            margin-bottom: 10px; /* Ajusta el espacio debajo del h1 */
+        }
+
+        .inicio-content p {
+            line-height: 1.4; /* Ajusta el espacio entre líneas del párrafo si es necesario */
+            margin-bottom: 15px; /* Ajusta el espacio debajo del párrafo */
+        }
+
 
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Lato&display=swap');
 
@@ -604,6 +661,7 @@
 
         .profile-container {
             display: flex;
+            align-items: flex-start;
             flex-direction: column;
             align-items: left;
             justify-content: center;
@@ -618,6 +676,7 @@
         }
 
         .profile-image img {
+            max-width: 100%;
             width: 100%;
             height: 100%;
             border-radius: 50%;
@@ -627,11 +686,34 @@
         }
 
         .profile-info {
+            flex: 1;
             width: 90%;
             max-width: 1200px;
             margin-top: 10px;
             justify-content: center;
         }
+
+        @media screen and (max-width: 768px) { /* Ajusta este valor según tus necesidades */
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .profile-info {
+                width: 100%;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }   
+        }
+
 
         .section-title {
             font-size: 30px;
@@ -660,7 +742,7 @@
             background-color: #ffffff;
             border-radius: 2px;
             overflow: hidden;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
@@ -1104,7 +1186,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="scrolled">
         <div class="container">
             <nav>
                 <div id="branding">
@@ -1116,13 +1198,13 @@
                     </span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="#inicio">Home</a></li>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#platforms">Platforms</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#talks">Talks</a></li> 
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#inicio">Home</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#about">About me</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#projects">Projects</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#platforms">Platforms</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#publications">Publications</a></li>
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#talks">Talks</a></li> 
+                    <li><a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -1132,7 +1214,7 @@
 
 
     <section id="inicio">
-        <div id="particles-js"></div>
+        <div id="particles-js"><canvas class="particles-js-canvas-el" width="2880" height="1576" style="width: 100%; height: 100%;"></canvas></div>
         <div class="inicio-content">
             <h1>Pablo Beytía</h1>
             <p>Computational Social Scientist | Digital Sociologist</p><br>
@@ -1145,12 +1227,12 @@
                 <div class="left-column">
                     <div class="profile-container">
                         <div class="profile-image">
-                            <img src="https://media.licdn.com/dms/image/D4D03AQHoXhZ3qpZQZg/profile-displayphoto-shrink_400_400/0/1718951324342?e=2147483647&v=beta&t=xJHEptr5E0QXGokYAnjYtouFQY_AuJWQaG6NDlnSCG4" alt="Pablo Beytía">
+                            <img src="./Pablo Beytía - Computational Social Science_files/1718951324342" alt="Pablo Beytía">
                         </div>
                         <div class="profile-info">
                             <h3>Pablo Beytía</h3>
-                            <p>Founder & CEO Monitor Social</p>
                             <p>Adjunct professor, P. Universidad Católica de Chile</p>
+                            <p>Founder &amp; CEO Monitor Social</p>
                             <p>PhD candidate, Humboldt University of Berlin</p>
                             <div class="social-icons">
                                 <a href="mailto:pablobeytia@gmail.com" title="Email">
@@ -1159,7 +1241,7 @@
                                 <a href="https://www.linkedin.com/in/pablo-beyt%C3%ADa/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://scholar.google.com/citations?user=mKJpNdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                                <a href="https://scholar.google.com/citations?user=mKJpNdQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar">
                                     <i class="fas fa-graduation-cap"></i>
                                 </a>
                                 <a href="https://www.researchgate.net/profile/Pablo-Beytia" target="_blank" rel="noopener noreferrer" title="ResearchGate">
@@ -1170,16 +1252,19 @@
                     </div>
                 </div>
                 <div class="right-column">
-                    <h2 class="section-title">About me</h2>
+                    <h2 class="section-title fade-in visible">About me</h2>
                     <div class="experience-section">
 
                         <p>I am an academic, consultant, and entrepreneur specialized in computational social science and digital society. With more than 15 years researching and teaching at the intersection of social sciences, computer science and humanities, I am dedicated to studying sociodigital phenomena (e.g., platforms, public attention, discourses, social memory, AI) and helping organizations to improve their social tuning through real-time information tools.</p>
-                        <p>I transform digital information in <span id="palabra"></span></p>
+                        <p>I transform digital information in  
+                            <span class="palabra-container">
+                                <span id="palabra">useful indicators.</span>
+                            </span>
                         <br>
-                        <h3>Timeline</h3>
+                        </p><h3>Timeline</h3>
                         <div class="experience-item">
                             <span>Since 2022 | <strong>Adjunct Professor, Institute of Sociology – Universidad Católica de Chile.</strong> Courses: Digital Sociology, Computational Social Science.<br>
-                        </div>
+                        </span></div>
                         <div class="experience-item">
                             <span>Since 2021 | <strong>Co-founder and CEO, Monitor Social</strong> (social analytics technologies based on digital data).</span>
                         </div>
@@ -1196,7 +1281,7 @@
                             <span>2021 | Associated Researcher, Alexander von Humboldt Institute for Internet and Society (Germany).</span>
                         </div>
                         <div class="experience-item">
-                            <span>2020 | Senior Fellow, Alexander von Humboldt Institute for Internet and Society (Germany). Research program: Knowledge & Society. </span>
+                            <span>2020 | Senior Fellow, Alexander von Humboldt Institute for Internet and Society (Germany). Research program: Knowledge &amp; Society. </span>
                         </div>
                         <div class="experience-item">
                             <span>2019 | Visiting Fellow, Centre for Interdisciplinary Methodologies – The University of Warwick (United Kingdom).</span>
@@ -1227,7 +1312,7 @@
                         </div> 
 
                         <br>
-                        <h3>Awards & honors</h3>
+                        <h3>Awards &amp; honors</h3>
                         <div class="experience-grid">
                             <div class="experience-item">
                                 <span><strong>Co-chair of the Wiki Workshop (2024) </strong><br> World Conference on Wikimedia Foundation Platforms</span>
@@ -1239,7 +1324,7 @@
                                 <span><strong>Honorable Mention Research Project (2019)</strong><br>Summer School on Methods for Computational Social Sciences, GESIS Leibniz Institute for the Social Sciences.</span>
                             </div>
                             <div class="experience-item">
-                                <span><strong>Emerging Scholar Award (2018) </strong><br>Communication & Media Studies Research Network, USA</span>
+                                <span><strong>Emerging Scholar Award (2018) </strong><br>Communication &amp; Media Studies Research Network, USA</span>
                             </div>
                             <div class="experience-item">
                                 <span><strong>Summa cum laude | Master of Arts in Philosohy (2016) </strong><br>University of Chile</span>
@@ -1249,10 +1334,10 @@
                             </div>
                         </div>
                         <br>
-                        <h3>Grants & scholarships</h3>
+                        <h3>Grants &amp; scholarships</h3>
                         <div class="experience-item">
                             <span>2023 - 2024 | Wikimedia Research Fund - International Fund for Research on Wikipedia<br>
-                        </div>
+                        </span></div>
                         <div class="experience-item">
                             <span>2023 - 2024 | Grants to organize the Summer Institute in Computational Social Science (SICSS) in Chile, supported by the Social Science Research Council (USA).</span>
                         </div>
@@ -1271,23 +1356,23 @@
                         <br>
                         <h3>Education</h3>
                         <div class="education-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Huberlin-logo.svg/1200px-Huberlin-logo.svg.png" alt="Humboldt">
+                            <img src="./Pablo Beytía - Computational Social Science_files/Huberlin-logo.svg.png" alt="Humboldt">
                             <span>PhD (c) in Sociology (specialization in computational social science), Humboldt University of Berlin</span>
                         </div>
                         <div class="education-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/John_F._Kennedy_School_of_Government_Shield.svg/1200px-John_F._Kennedy_School_of_Government_Shield.svg.png" alt="Harvard">
+                            <img src="./Pablo Beytía - Computational Social Science_files/John_F._Kennedy_School_of_Government_Shield.svg.png" alt="Harvard">
                             <span>Leaders in Development (public policy program to manage development processes), Harvard Kennedy School of Government</span>
                         </div>
                         <div class="education-item">
-                            <img src="https://uchile.cl/dam/imagenes/Uchile/imagenes-contenidos-generales/LogoUdeChile/02-escudo-uchile-jpg/escudo-uchile-vertical-color.jpg" alt="Universidad de Chile">
+                            <img src="./Pablo Beytía - Computational Social Science_files/escudo-uchile-vertical-color.jpg" alt="Universidad de Chile">
                             <span>Master of Arts in Philosophy (summa cum laude), Universidad de Chile</span>
                         </div>
                         <div class="education-item">
-                            <img src="https://media.licdn.com/dms/image/C4E0BAQEtD3QheHdsEg/company-logo_200_200/0/1630595448601?e=1729123200&v=beta&t=m_uAkeOo8vjKGjpd_pImv-QD4sTnyksrwf1fdp4AciY" alt="Universidad Católica de Chile">
+                            <img src="./Pablo Beytía - Computational Social Science_files/1630595448601" alt="Universidad Católica de Chile">
                             <span>Master of Arts in sociology (summa cum laude), P. Universidad Católica de Chile</span>
                         </div>
                         <div class="education-item">
-                            <img src="https://media.licdn.com/dms/image/C4E0BAQEtD3QheHdsEg/company-logo_200_200/0/1630595448601?e=1729123200&v=beta&t=m_uAkeOo8vjKGjpd_pImv-QD4sTnyksrwf1fdp4AciY" alt="Universidad Católica de Chile">
+                            <img src="./Pablo Beytía - Computational Social Science_files/1630595448601" alt="Universidad Católica de Chile">
                             <span>Sociologist, P. Universidad Católica de Chile</span>
                         </div>
                                              
@@ -1300,22 +1385,22 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Current projects</h2>
+            <h2 class="section-title fade-in visible">Current projects</h2>
             <div class="project-grid">
                 <!-- Project 1 -->
-                <a href="https://www.monitorsocial.cl" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <img src="https://static.wixstatic.com/media/657f14_5c38a09924554dcb99a087f2c53e7c2c~mv2.jpg" alt="Monitor Social" class="project-image">
+                <a href="https://www.monitorsocial.cl/" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <img src="./Pablo Beytía - Computational Social Science_files/657f14_5c38a09924554dcb99a087f2c53e7c2c~mv2.jpg" alt="Monitor Social" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Monitor Social (2021 - present)</h3>
-                        <p class="project-description" title="Monitor Social is a start-up focused on generating technological tools to analyse social phenomena in real time. In 2022, it won a World Summit Award (category: Government & citizen engagement), a United Nations recognition for the best digital innovations in the world.">
-                            Monitor Social is a start-up focused on generating technological tools to analyse social phenomena in real time. In 2022, it won a World Summit Award (category: Government & citizen engagement), a United Nations recognition for the best digital innovations in the world.</p>
+                        <p class="project-description" title="Monitor Social is a start-up focused on generating technological tools to analyse social phenomena in real time. In 2022, it won a World Summit Award (category: Government &amp; citizen engagement), a United Nations recognition for the best digital innovations in the world.">
+                            Monitor Social is a start-up focused on generating technological tools to analyse social phenomena in real time. In 2022, it won a World Summit Award (category: Government &amp; citizen engagement), a United Nations recognition for the best digital innovations in the world.</p>
                         <span class="project-link">Learn More</span>
                     </div>
                 </a>
 
                 <!-- Project 2 -->
                 <a href="https://meta.wikimedia.org/wiki/Research:Social_Memory_about_Chileans_in_Wikipedia" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Dashboard_example_2.png" alt="Social Memory about Chileans in Wikipedia" class="project-image">
+                    <img src="./Pablo Beytía - Computational Social Science_files/Dashboard_example_2.png" alt="Social Memory about Chileans in Wikipedia" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Social Memory about Chileans in Wikipedia (2023 - 2024)</h3>
                         <p class="project-description" title="This project investigates Chilean biographies on Wikipedia, examining how content gaps evolve across generations of notable people. Our goal is to explore these gaps in various occupational domains (e.g., politics, science, art, and sport) and understand, with these trends, how Wikipedia is framing (highlighting aspects of) the history of notable Chileans.">
@@ -1326,7 +1411,7 @@
                 
                 <!-- Project 3 -->
                 <a href="https://sicss.io/2023/chile/" target="_blank" rel="noopener noreferrer" class="project-card">
-                    <img src="https://sicss.io/assets/images/logos/about-sicss.png" alt="SICSS-Chile" class="project-image">
+                    <img src="./Pablo Beytía - Computational Social Science_files/about-sicss.png" alt="SICSS-Chile" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">SICSS-Chile (2023 - present)</h3>
                         <p class="project-description" title="I am co-organising the Summer Institutes in Computational Social Science in Chile (SICSS-Chile). SICSS is a US-based project that aims to bring together graduate students, postdoctoral researchers and junior faculty to learn computational social science.">
@@ -1342,7 +1427,7 @@
 
     <section id="platforms">
         <div class="container">
-            <h2 class="section-title">Social Information Platforms</h2>
+            <h2 class="section-title fade-in visible">Social Information Platforms</h2>
 
             <p> 
                 As a computational social scientist, I develop interactive websites that provide social information about countries and organisations. Usually, they report trends in real time to improve the social tuning of decision makers. Feel free to contact me if you need a tool of this kind.
@@ -1351,7 +1436,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/chilenos" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_14ffdcb7484d4c0aa1b9e662217e13c8~mv2.png" alt="Chilenos en la memoria" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_14ffdcb7484d4c0aa1b9e662217e13c8~mv2.png" alt="Chilenos en la memoria" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Chilenos en la memoria (2024)</h3>
@@ -1364,7 +1449,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/emociones-presidenciales" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_09ce5ee3d95948bc8c2704706be7fd4b~mv2.png" alt="Emociones presidenciales" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_09ce5ee3d95948bc8c2704706be7fd4b~mv2.png" alt="Emociones presidenciales" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Emociones presidenciales (2024 - present)</h3>
@@ -1377,7 +1462,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/chile-trending" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_135f39b25c554191b64eeb8042d8132d~mv2.png" alt="Chile Trending" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_135f39b25c554191b64eeb8042d8132d~mv2.png" alt="Chile Trending" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Chile Trending (2023 - present)</h3>
@@ -1390,7 +1475,7 @@
                  <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/detector-crisis" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_66187bb8025a48498e497c8f8fa83036~mv2.png" alt="Detector de crisis" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_66187bb8025a48498e497c8f8fa83036~mv2.png" alt="Detector de crisis" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Detector de Crisis (2023 - present)</h3>
@@ -1403,7 +1488,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/plebiscito2023" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_74417f692a9f485192bdff719e375d36~mv2.png" alt="Plebiscito de salida (2023)" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_74417f692a9f485192bdff719e375d36~mv2.png" alt="Plebiscito de salida (2023)" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Plebiscito de salida (2023)</h3>
@@ -1416,11 +1501,11 @@
                  <!-- Platform 1 -->
                  <a href="https://www.monitorsocial.cl/politicos" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_7648d7123c414bdab84f7bbf38161e43~mv2.png" alt="Políticos en la memoria" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_7648d7123c414bdab84f7bbf38161e43~mv2.png" alt="Políticos en la memoria" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Políticos en la memoria (2022)</h3>
-                        <p class="platform-description" title="A place to explore who are the most socially remembered politicians in Chile's history, based on 5,442 Wikipedia biographies in multiple languages.">
+                        <p class="platform-description" title="A place to explore who are the most socially remembered politicians in Chile&#39;s history, based on 5,442 Wikipedia biographies in multiple languages.">
                             A place to explore who are the most socially remembered politicians in Chile's history, based on 5,442 Wikipedia biographies in multiple languages.</p>
                         <span class="platform-link">Learn More</span>
                     </div>
@@ -1429,7 +1514,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/riesgos" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_ec2b6e4681624a8497df5c009ba8f41a~mv2.png" alt="Detector de riesgos y desastres (2022 - present)" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_ec2b6e4681624a8497df5c009ba8f41a~mv2.png" alt="Detector de riesgos y desastres (2022 - present)" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Detector de riesgos y desastres (2022 - present)</h3>
@@ -1442,7 +1527,7 @@
                 <!-- Platform 1 -->
                 <a href="https://www.monitorsocial.cl/conflictos" target="_blank" rel="noopener noreferrer" class="platform-card">
                     <div class="platform-image-container">
-                        <img src="https://static.wixstatic.com/media/657f14_d7793d5746b449fab6406abfabce8b79~mv2.png" alt="Detector de conflictos (2022 - present)" class="platform-image">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_d7793d5746b449fab6406abfabce8b79~mv2.png" alt="Detector de conflictos (2022 - present)" class="platform-image">
                     </div>
                     <div class="platform-content">
                         <h3 class="platform-title">Detector de conflictos (2022 - present)</h3>
@@ -1459,7 +1544,7 @@
 
 <section id="publications">
     <div class="container">
-        <h2 class="section-title">Academic publications</h2>
+        <h2 class="section-title fade-in visible">Academic publications</h2>
         
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -1474,7 +1559,7 @@
             <div class="publication-list" id="books-list">
                 <div class="publication-item book-item" data-category="social-theory">
                     <div class="book-image">
-                        <img src="https://static.wixstatic.com/media/657f14_6abc202a6ef747b6aa7174b3fad7f0e1~mv2.png" alt="Portada del libro La síntesis de la libertad">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_6abc202a6ef747b6aa7174b3fad7f0e1~mv2.png" alt="Portada del libro La síntesis de la libertad">
                     </div>
                     <div class="book-info">
                         <h4>La síntesis de la libertad</h4>
@@ -1482,7 +1567,7 @@
                         <p class="book-author">Pablo Beytía</p>
                         <p class="book-details">
                             (2019). Santiago de Chile: RIL editores.
-                            <a href="ruta/al/archivo.pdf" class="pdf-link" title="Download PDF" target="_blank">
+                            <a href="file:///Users/macbookpro/Downloads/ruta/al/archivo.pdf" class="pdf-link" title="Download PDF" target="_blank">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                         </p>
@@ -1500,98 +1585,98 @@
             <h3>Papers</h3>
             <div class="publication-list" id="papers-list">
                 <div class="publication-item" data-category="computational-social-science digital-sociology">
-                    <p>Beytía, Pablo, Camila Rojas & Carlos Cruz (2024). Social Memory about people from a country. The case of notable Chileans in Wikipedia.<i>Wiki Workshop 2024</i>.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <p>Beytía, Pablo, Camila Rojas &amp; Carlos Cruz (2024). Social Memory about people from a country. The case of notable Chileans in Wikipedia.<i>Wiki Workshop 2024</i>.
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="computational-social-science digital-sociology">
-                    <p>Beytía, Pablo & Hans-Peter Müller (2022). Towards a Digital Reflexive Sociology: Using Wikipedia's Biographical Repository as a Reflexive Tool. <i>Poetics</i>.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <p>Beytía, Pablo &amp; Hans-Peter Müller (2022). Towards a Digital Reflexive Sociology: Using Wikipedia's Biographical Repository as a Reflexive Tool. <i>Poetics</i>.
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="computational-social-science digital-sociology">
                     <p>Beytía, Pablo, Pushkal Agarwal, Miriam Redi, and Vivek Singh (2022). Visual Gender Biases in Wikipedia: A Systematic Evaluation across the Ten Most Spoken Languages. <i>Proceedings of the International Conference on Web and Social Media - ICWSM 2022</i>.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="computational-social-science digital-sociology social-theory">
-                    <p>Beytía, Pablo & Claudia Wagner (2022). Visibility Layers: A Framework for Systematising the Gender Gap in Wikipedia Content.<i>Internet Policy Review</i> (11, 1).
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <p>Beytía, Pablo &amp; Claudia Wagner (2022). Visibility Layers: A Framework for Systematising the Gender Gap in Wikipedia Content.<i>Internet Policy Review</i> (11, 1).
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="computational-social-science">
-                    <p>Beytía, Pablo & Janosch Schobin (2020). Networked Pantheon: a Relational Database of Globally Famous People. <i>Research Data Journal for the Humanities and Social Sciences, Vol. 5</i>.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <p>Beytía, Pablo &amp; Janosch Schobin (2020). Networked Pantheon: a Relational Database of Globally Famous People. <i>Research Data Journal for the Humanities and Social Sciences, Vol. 5</i>.
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="computational-social-science digital-sociology">
                     <p>Beytía, Pablo (2020). The Positioning Matters. Estimating Geographical Bias in the Multilingual Record of Biographies on Wikipedia. <i>Companion Proceedings of the Web Conference 2020</i>, April 20-24, 2020, Taipei, Taiwan.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2017). El panóptico de Bentham y la instrumentalización de los derechos humanos. <i>Universitas Philosophica</i>, N° 68.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-development">
                     <p>Beytía, Pablo (2016). ¿Cómo explicar la prosperidad de los países? Tres teorías en disputa y un esbozo de convergencia. <i>Revista CIS</i>, N° 21.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2016). Fatum e historia: la teoría de la acción esbozada por Nietzsche en su juventud. <i>Andamios</i>, N° 32.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-development">
                     <p>Beytía, Pablo (2015). El potencial político de la felicidad. Fundamentos científicos y de aplicación gubernamental. <i>Persona y Sociedad</i>: Vol. XXIX, N° 3.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
-                    <p>Beytía, Pablo (2014). La libertad de los dominados. Aportes y límites de la teoría del poder de John Searle. </i>Estudios Públicos</i>, Nº 135.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <p>Beytía, Pablo (2014). La libertad de los dominados. Aportes y límites de la teoría del poder de John Searle. Estudios Públicos, Nº 135.
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2014). La lucha contemporánea por el espacio en la obra de Carl Schmitt. <i>Eikasia</i>, Nº 56, pp. 129-141.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2014). La copertenencia entre hombre y mundo en la comprensión heideggeriana del lenguaje. <i>Eikasia</i>, Nº 55, pp. 93-106.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2012). Una lectura bourdieuana acerca de Bourdieu. La posición epistemológica del constructivismo estructuralista. <i>Persona y Sociedad</i>, Vol. XXVI, Nº 3, pp. 11-31.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2012). Creatividad situada, contingencia y modernidad. Entrevista a Hans Joas. <i>Andamios</i>, Nº 19, pp. 359-390.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
                 <div class="publication-item" data-category="social-theory">
                     <p>Beytía, Pablo (2011). Gestación y desarrollo de la sociedad contemporánea en la obra de Niklas Luhmann. <i>Doble Vínculo</i>, Nº 3, pp. 134-151.
-                    <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                    <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                     </a></p>
                 </div>
@@ -1603,8 +1688,8 @@
             <div class="publication-list" id="books-list">
                 <div class="publication-item" data-category="social-development">
                     <p>
-                        Beytía, Pablo (2018). The Efficiency of Subjective Well-being: a Key to Latin American Development. In: <i>Masaheli, M., Bula, G. & Harrington, S. E. Latin American perspectives on global development.</i> Cambridge: Cambridge Scholars Publishing.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        Beytía, Pablo (2018). The Efficiency of Subjective Well-being: a Key to Latin American Development. In: <i>Masaheli, M., Bula, G. &amp; Harrington, S. E. Latin American perspectives on global development.</i> Cambridge: Cambridge Scholars Publishing.
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1612,7 +1697,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2018). Vínculos familiares: una clave explicativa de la felicidad. In: <i>Muñoz, Mónica y Carmen Reyes. La familia en tiempos de cambio. Santiago de Chile: Uqbar</i>.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1620,7 +1705,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2016). La estructura interna de la pobreza multidimensional. In: <i>Siles, Catalina (Ed.). Los invisibles. ¿Por qué la pobreza y la segregación social dejaron de ser prioridad? Santiago de Chile: Instituto de Estudios de la Sociedad</i>.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1628,7 +1713,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2015). The Singularity of Latin American Patterns of Happiness. In: <i>Mariano Rojas (ed.). Handbook of Happiness Research in Latin America. Dordrecht: Springer</i>.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1636,7 +1721,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Reyes, Carmen, Mónica Muñoz y Pablo Beytía (2015). Ser madre o padre soltero en Chile: una mirada a los jóvenes universitarios. In: <i>Reyes, Carmen y Samuel Yañez. Sexualidad(es) y evangelio. Santiago de Chile: Ediciones Universidad Alberto Hurtado</i>.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1650,8 +1735,8 @@
             <div class="publication-list" id="working-papers-list">
                 <div class="publication-item" data-category="computational-social-science digital sociology">
                     <p>
-                        Beytía, Pablo & Carlos Cruz Infante (2020). Digital Pathways, Pandemic Trajectories. Using Google Trends to Track Social Responses to COVID-19. <i>HIIG Discussion Paper Series</i>, 2020-01.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        Beytía, Pablo &amp; Carlos Cruz Infante (2020). Digital Pathways, Pandemic Trajectories. Using Google Trends to Track Social Responses to COVID-19. <i>HIIG Discussion Paper Series</i>, 2020-01.
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1659,7 +1744,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2017). Pobreza multidimensional como red de privaciones. Una exploración relacional de las carencias en Chile. <i>Cuadernos ISUC</i>, Nº 3.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1667,7 +1752,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2014). Barrios de vivienda social: tres focos para revertir su deterioro urbano. <i>Claves de Políticas Públicas</i>, Nº 23.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1675,7 +1760,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2013). Situación laboral en los campamentos de la región Metropolitana. <i>ÉnfaCIS</i>, Nº 2.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1683,7 +1768,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2012). La pobreza invisible. Sobre la satisfacción con la vida en los campamentos de Chile. <i>ÉnfaCIS</i>, Nº 1.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1691,7 +1776,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo y Esteban Calvo (2011). ¿Cómo medir la felicidad? <i>Claves para Políticas Públicas</i>, Nº 4.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1706,7 +1791,7 @@
                 <div class="publication-item" data-category="social-theory">
                     <p>
                         Beytía, Pablo (2015). La síntesis raciovitalista de la libertad. <i>Thesis of Master in Philosophy</i>, Universidad de Chile.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1714,7 +1799,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Beytía, Pablo (2011). El impacto del contexto social en los determinantes individuales de la felicidad. América Latina, Europa occidental y Estados Unidos en perspectiva comparada. <i>Thesis of Master in Sociology</i>, Pontificia Universidad Católica de Chile.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1729,7 +1814,7 @@
                 <div class="publication-item" data-category="social-theory">
                     <p>
                         Beytía, Pablo (2017). Una grieta en la civilización occidental. Book review of Berlin, Isaiah (2015). Las raíces del romanticismo (segunda edición). Buenos Aires: Taurus. <i>Estudios Públicos</i>, Nº 146.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1737,7 +1822,7 @@
                 <div class="publication-item" data-category="social-theory">
                     <p>
                         Beytía, Pablo (2011). Imaginarios sociales modernos (Charles Taylor). <i>Persona y Sociedad</i>, XXV, Nº 3, pp. 151-154.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1752,7 +1837,7 @@
                 <div class="publication-item" data-category="social-theory">
                     <p>
                         Dewey, John (2015). Fuerza y coerción. <i>Estudios Públicos</i>, Nº 139, pp. 259-270 (introduction by Pablo Beytía). Original version (1916). Force and Coercion. International Journal of Ethics, Vol. 26, Nº 3.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1760,7 +1845,7 @@
                 <div class="publication-item" data-category="social-development">
                     <p>
                         Paugam, Serge (2015). Ciencia y consciencia de la pobreza. <i>Revista CIS</i>, Nº 18. Original version: (2005). Science et conscience de la pauvreté. L'Économie Politique, Nº 26.
-                        <a href="#" class="pdf-link" title="Download PDF" target="_blank">
+                        <a href="file:///Users/macbookpro/Downloads/Copia%20de%20pablo-beytia-website.html#" class="pdf-link" title="Download PDF" target="_blank">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </p>
@@ -1774,17 +1859,17 @@
 
 
 
-        </div>
-    </section>
+        
+    
 
 
     <section id="talks">
     <div class="container">
-        <h2 class="section-title">Talks & interviews</h2>
+        <h2 class="section-title fade-in visible">Talks &amp; interviews</h2>
         <div class="talks-grid">
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="iI5gn5Rp8Sk">
-                    <img src="https://img.youtube.com/vi/iI5gn5Rp8Sk/0.jpg" alt="Monitor Social: combinando sociología y tecnología">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0.jpg" alt="Monitor Social: combinando sociología y tecnología">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Monitor Social: combinando sociología y tecnología</h3>
@@ -1792,49 +1877,49 @@
             <div class="talk-card">
                 <a href="https://www.duna.cl/programa/nada-personal/2023/11/06/pablo-beytia-y-la-interaccion-en-internet-este-proceso-constitucional-ha-tenido-muy-poca-atencion-de-manera-bastante-sostenida-mucho-menos-que-la-convencion/" target="_blank" rel="noopener noreferrer">
                     <div class="video-thumbnail">
-                        <img src="https://static.wixstatic.com/media/657f14_75319533d29d4a51abe50b3fe25108ec~mv2.png" alt="Pablo Beytía y la interacción en Internet">
+                        <img src="./Pablo Beytía - Computational Social Science_files/657f14_75319533d29d4a51abe50b3fe25108ec~mv2.png" alt="Pablo Beytía y la interacción en Internet">
                     </div>
                 </a>
                 <h3 class="talk-title">Pablo Beytía y la interacción en Internet</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="vW0waU-QArU?start=2443">
-                    <img src="https://static.wixstatic.com/media/657f14_08c166451f7644fa84eb4b0b2a91ce46~mv2.png" alt="Wikimedia Research Showcase: Visual gender biases in Wikipedia">
+                    <img src="./Pablo Beytía - Computational Social Science_files/657f14_08c166451f7644fa84eb4b0b2a91ce46~mv2.png" alt="Wikimedia Research Showcase: Visual gender biases in Wikipedia">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Wikimedia Research Showcase: Visual gender biases in Wikipedia</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="2LKCeJiAkPk">
-                    <img src="https://img.youtube.com/vi/2LKCeJiAkPk/0.jpg" alt="Visual gender biases in Wikipediaː A systematic evaluation across the ten most spoken languages">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0(1).jpg" alt="Visual gender biases in Wikipediaː A systematic evaluation across the ten most spoken languages">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Visual gender biases in Wikipediaː A systematic evaluation across the ten most spoken languages</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="4HBA0ki9qQY">
-                    <img src="https://img.youtube.com/vi/4HBA0ki9qQY/0.jpg" alt="Elecciones en Chile">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0(2).jpg" alt="Elecciones en Chile">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Elecciones en Chile</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="y9zAN-s8Pug">
-                    <img src="https://img.youtube.com/vi/y9zAN-s8Pug/0.jpg" alt="Predicción elctoral y sociología digital">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0(3).jpg" alt="Predicción elctoral y sociología digital">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Predicción elctoral y sociología digital</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="z94L-6qAvgs">
-                    <img src="https://img.youtube.com/vi/z94L-6qAvgs/0.jpg" alt="Vivienda social en Chile">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0(4).jpg" alt="Vivienda social en Chile">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Vivienda social en Chile</h3>
             </div>
             <div class="talk-card">
                 <div class="video-thumbnail" data-video-type="youtube" data-video-id="BZZTnPc8tY4">
-                    <img src="https://img.youtube.com/vi/BZZTnPc8tY4/0.jpg" alt="Vulnerabilidad territorial y patrones de segregación urbana">
+                    <img src="./Pablo Beytía - Computational Social Science_files/0(5).jpg" alt="Vulnerabilidad territorial y patrones de segregación urbana">
                     <div class="play-button"></div>
                 </div>
                 <h3 class="talk-title">Vulnerabilidad territorial y patrones de segregación urbana</h3>
@@ -1845,7 +1930,7 @@
 
 <div id="video-popup" class="video-popup">
     <div class="video-popup-content">
-        <span class="close-popup">&times;</span>
+        <span class="close-popup">×</span>
         <div id="video-container"></div>
     </div>
 </div>
@@ -1855,7 +1940,7 @@
 
 <section id="contact" class="py-16 bg-gray-100">
     <div class="container mx-auto px-4">
-        <h2 class="section-title text-3xl font-bold text-center mb-8">Contact</h2>
+        <h2 class="section-title fade-in text-3xl font-bold text-center mb-8 visible">Contact</h2>
         <div class="max-w-2xl mx-auto text-center">
             <p class="mb-6">Feel free to get in touch for collaborations, talks, consultancies, projects, research inquiries or academics issues.</p>
             <p class="mb-6">Contact email: pablobeytia@gmail.com</p>
@@ -1867,7 +1952,7 @@
                 <a href="https://www.linkedin.com/in/pablo-beyt%C3%ADa/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="text-2xl hover:text-blue-600 transition-colors duration-300">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://scholar.google.com/citations?user=mKJpNdQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar" class="text-2xl hover:text-blue-600 transition-colors duration-300">
+                <a href="https://scholar.google.com/citations?user=mKJpNdQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar" class="text-2xl hover:text-blue-600 transition-colors duration-300">
                     <i class="fas fa-graduation-cap"></i>
                 </a>
                 <a href="https://www.researchgate.net/profile/Pablo-Beytia" target="_blank" rel="noopener noreferrer" title="ResearchGate" class="text-2xl hover:text-blue-600 transition-colors duration-300">
@@ -1883,9 +1968,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Pablo Beytía. All rights reserved.</p>
+            <p>© 2024 Pablo Beytía. All rights reserved.</p>
             </div>
-        </div>
+        
     </footer>
 
 
@@ -1923,7 +2008,7 @@
         window.addEventListener('load', handleScroll);
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./Pablo Beytía - Computational Social Science_files/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
             "particles": {
@@ -2227,8 +2312,8 @@ function openPopup(videoId, videoType) {
 
 </script>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script src="script.js"></script>
+<script async="" src="./Pablo Beytía - Computational Social Science_files/widgets.js" charset="utf-8"></script>
+<script src="file:///Users/macbookpro/Downloads/script.js"></script>
 
 
 
@@ -2273,5 +2358,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Pablo Beytía - Computational Social Science_files/saved_resource.html"></iframe>
 </body>
 </html>
